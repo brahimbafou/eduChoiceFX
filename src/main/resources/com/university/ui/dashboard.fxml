@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.university.ui.DashboardController">
+   <left>
+   </left>
+   <center>
+      <VBox fx:id="contentArea" spacing="10">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+
+         <ScrollPane>
+            <VBox>
+               <!-- This VBox will contain the dynamic content loaded for each management section -->
+            </VBox>
+         </ScrollPane>
+      </VBox>
+   </center>
+   <left>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <VBox spacing="10.0">
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+               <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@assets/logo/logo%20landscape.png" />
+                  </image>
+               </ImageView>
+               <HBox fx:id="studentsTabHBox" alignment="CENTER_LEFT" onMouseClicked="#handleStudentsManagement" spacing="5">
+                  <SVGPath content="M12,11.6c2.7,0,4.8-2.2,4.8-4.8S14.7,2,12,2S7.2,4.1,7.2,6.8S9.3,11.6,12,11.6z M12,3.9c1.6,0,2.9,1.3,2.9,2.9S13.6,9.7,12,9.7S9.1,8.4,9.1,6.8S10.4,3.9,12,3.9z M3.5,22L3.5,22c0.2,0,0.5,0,0.7-0.2c0.2-0.2,0.4-0.4,0.4-0.7c0.3-2.8,2.7-4.9,5.5-4.9h3.8c2.8,0,5.2,2.1,5.5,4.9c0.1,0.5,0.5,0.9,1,0.9c0,0,0.1,0,0.1,0c0.3,0,0.5-0.2,0.7-0.4c0.2-0.2,0.2-0.5,0.2-0.7c-0.4-3.8-3.6-6.7-7.4-6.7h-3.8c-3.8,0-7,2.9-7.4,6.7c0,0.3,0,0.5,0.2,0.7C3,21.8,3.3,21.9,3.5,22L3.5,22z" fill="black" strokeWidth="1" />
+                  <Label text="Students Management">
+                     <font>
+                        <Font name="Cairo SemiBold" size="16.0" />
+                     </font>
+                  </Label>
+                  <padding>
+                     <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                  </padding>
+                  <styleClass>
+                     <String fx:value="tabHBox" />
+                  </styleClass>
+               </HBox>
+               <HBox fx:id="specialitiesTabHBox" alignment="CENTER_LEFT" onMouseClicked="#handleSpecialtyManagement" spacing="5" styleClass="tabHBox">
+                  <SVGPath content="M4.9,18.8h3.2c1.2,0,2.2,0.7,2.7,1.8c0.3,0.7,1,1,1.7,0.7c0.3-0.1,0.6-0.4,0.7-0.7c0.4-1.1,1.5-1.8,2.7-1.8h3.2c1.6,0,2.9-1.3,2.9-2.9V5.5c0-1.6-1.3-2.9-2.9-2.9h-3.2c-1.4,0-2.7,0.6-3.6,1.6L12,4.6l-0.2-0.3c-0.9-1.1-2.2-1.7-3.6-1.7H4.9C3.3,2.6,2,3.9,2,5.5v10.3C2,17.5,3.3,18.8,4.9,18.8z M13,7.5c0-1.6,1.3-2.9,2.9-2.9h3.2c0.5,0,1,0.4,1,1v10.3c0,0.5-0.4,1-1,1h-3.2c-0.8,0-1.7,0.2-2.4,0.6L13,17.8V7.5z M3.9,5.5c0-0.5,0.4-1,1-1h3.2c1.6,0,2.9,1.3,2.9,2.9v10.3l-0.5-0.3c-0.7-0.4-1.6-0.6-2.4-0.6H4.9c-0.5,0-1-0.4-1-1V5.5z" fill="black" strokeWidth="1" />
+                  <Label text="Specialty Management">
+                     <font>
+                        <Font name="Cairo SemiBold" size="16.0" />
+                     </font>
+                  </Label>
+                  <padding>
+                     <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                  </padding>
+               </HBox>
+               <HBox fx:id="choicesTabHBox" alignment="CENTER_LEFT" onMouseClicked="#handleChoicesManagement" spacing="5" styleClass="tabHBox">
+                  <SVGPath content="M10.4,16.3c-0.3-1.4-1.3-2.5-2.8-2.8c-0.3-0.1-0.7-0.1-1.3-0.1c-0.6,0-1,0-1.3,0.1c-1.4,0.3-2.5,1.3-2.8,2.8c-0.1,0.3-0.1,0.7-0.1,1.3c0,0.6,0,1,0.1,1.3c0.3,1.4,1.3,2.5,2.8,2.8c0.3,0.1,0.7,0.1,1.3,0.1c0.6,0,1,0,1.3-0.1c1.4-0.3,2.5-1.3,2.8-2.8c0.1-0.3,0.1-0.7,0.1-1.3C10.5,17,10.5,16.7,10.4,16.3z M8.5,18.5c-0.1,0.6-0.6,1.1-1.2,1.2c-0.1,0-0.4,0-0.9,0c-0.5,0-0.8,0-0.9,0c-0.6-0.1-1.1-0.6-1.2-1.2c0-0.1,0-0.4,0-0.9c0-0.5,0-0.8,0-0.9c0.1-0.6,0.6-1.1,1.2-1.2c0.1,0,0.4,0,0.9,0c0.5,0,0.8,0,0.9,0c0.6,0.1,1.1,0.6,1.2,1.2c0,0.1,0,0.4,0,0.9C8.5,18.2,8.5,18.4,8.5,18.5z M10.4,5.1c-0.3-1.4-1.3-2.5-2.8-2.8C7.3,2.2,7,2.2,6.4,2.2c-0.6,0-1,0-1.3,0.1C3.7,2.6,2.6,3.7,2.3,5.1C2.2,5.4,2.2,5.8,2.2,6.4c0,0.6,0,1,0.1,1.3c0.3,1.4,1.3,2.5,2.8,2.8c0.3,0.1,0.7,0.1,1.3,0.1c0.6,0,1,0,1.3-0.1c1.4-0.3,2.5-1.3,2.8-2.8c0.1-0.3,0.1-0.7,0.1-1.3C10.5,5.8,10.5,5.4,10.4,5.1z M8.5,7.3C8.3,7.9,7.9,8.3,7.3,8.5c-0.1,0-0.4,0-0.9,0c-0.5,0-0.8,0-0.9,0C4.9,8.3,4.4,7.9,4.3,7.3c0-0.1,0-0.4,0-0.9c0-0.5,0-0.8,0-0.9c0.1-0.6,0.6-1.1,1.2-1.2c0.1,0,0.4,0,0.9,0c0.5,0,0.8,0,0.9,0c0.6,0.1,1.1,0.6,1.2,1.2c0,0.1,0,0.4,0,0.9C8.5,6.9,8.5,7.2,8.5,7.3z M21.7,5.1c-0.3-1.4-1.3-2.5-2.8-2.8c-0.3-0.1-0.7-0.1-1.3-0.1c-0.6,0-1,0-1.3,0.1c-1.4,0.3-2.5,1.3-2.8,2.8c-0.1,0.3-0.1,0.7-0.1,1.3c0,0.6,0,1,0.1,1.3c0.3,1.4,1.3,2.5,2.8,2.8c0.3,0.1,0.7,0.1,1.3,0.1c0.6,0,1,0,1.3-0.1c1.4-0.3,2.5-1.3,2.8-2.8c0.1-0.3,0.1-0.7,0.1-1.3C21.8,5.8,21.8,5.4,21.7,5.1z M19.7,7.3c-0.1,0.6-0.6,1.1-1.2,1.2c-0.1,0-0.4,0-0.9,0c-0.5,0-0.8,0-0.9,0c-0.6-0.1-1.1-0.6-1.2-1.2c0-0.1,0-0.4,0-0.9c0-0.5,0-0.8,0-0.9c0.1-0.6,0.6-1,1.2-1.2c0.1,0,0.4,0,0.9,0c0.5,0,0.8,0,0.9,0c0.6,0.1,1.1,0.6,1.2,1.2c0,0.1,0,0.4,0,0.9C19.8,6.9,19.8,7.2,19.7,7.3z M20.8,19.4c0.4,0.4,0.4,1,0,1.4c-0.4,0.4-1,0.4-1.4,0L17.6,19l-1.8,1.8c-0.4,0.4-1,0.4-1.4,0c-0.4-0.4-0.4-1,0-1.4l1.8-1.8l-1.8-1.8c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l1.8,1.8l1.8-1.8c0.4-0.4,1-0.4,1.4,0c0.4,0.4,0.4,1,0,1.4L19,17.6L20.8,19.4z" fill="black" strokeWidth="1" />
+                  <Label text="Choices Management">
+                     <font>
+                        <Font name="Cairo SemiBold" size="16.0" />
+                     </font>
+                  </Label>
+                  <padding>
+                     <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                  </padding>
+               </HBox>
+               <Pane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+               <HBox alignment="CENTER">
+                  <children>
+                     <Button mnemonicParsing="false" styleClass="flat-button" text="Settings">
+                        <graphic>
+                           <SVGPath content="M12,21c5,0,9-4,9-9s-4-9-9-9s-9,4-9,9S7,21,12,21z M12,4.7c4,0,7.3,3.3,7.3,7.3c0,1.7-0.6,3.2-1.6,4.5L15.2,14c0.4-0.6,0.6-1.3,0.6-2c0-1.9-1.5-3.6-3.4-3.8c-0.5,0-0.9,0.3-1,0.8c0,0.2,0,0.5,0.2,0.6C11.8,9.8,12,10,12.2,10c1,0.1,1.8,1,1.8,2c0,1.1-0.9,2-2,2c-1,0-1.9-0.8-2-1.8c0-0.5-0.4-0.8-0.9-0.8c0,0-0.1,0-0.1,0c-0.2,0-0.4,0.1-0.6,0.3c-0.1,0.2-0.2,0.4-0.2,0.6c0.2,1.9,1.8,3.4,3.8,3.4c0.7,0,1.4-0.2,2-0.6l2.5,2.5c-1.2,1-2.8,1.6-4.5,1.6c-4,0-7.3-3.3-7.3-7.3S8,4.7,12,4.7L12,4.7z" />
+                        </graphic>
+                        <font>
+                           <Font name="Cairo SemiBold" size="18.0" />
+                        </font>
+                     </Button>
+                  </children>
+               </HBox>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+         </children></HBox>
+   </left>
+   <top>
+      <HBox fx:id="topActionBar" alignment="CENTER_LEFT" onMouseDragged="#handleActionBarDrag" onMousePressed="#handleActionBarPress" style="-fx-background-color: #122438;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" spacing="8.0">
+               <children>
+                  <ImageView fitHeight="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/logo/logo%20landscape%20negative_logo%20landscape.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Student managment App" textFill="#edf4f9">
+                     <font>
+                        <Font name="Cairo Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+            </HBox>
+            <Pane HBox.hgrow="ALWAYS" />
+            <HBox fx:id="closeHBox" alignment="CENTER" onMouseClicked="#handleCloseAction" prefWidth="32.0" styleClass="close-hbox">
+               <children>
+                  <SVGPath content="M18.2,16.6c0.2,0.2,0.3,0.5,0.3,0.8c0,0.3-0.1,0.6-0.3,0.8c-0.4,0.4-1.2,0.4-1.6,0L12,13.6l-4.6,4.6c-0.4,0.4-1.2,0.4-1.6,0c-0.2-0.2-0.3-0.5-0.3-0.8c0-0.3,0.1-0.6,0.3-0.8l4.6-4.6L5.8,7.4C5.6,7.2,5.5,6.9,5.5,6.6c0-0.3,0.1-0.6,0.3-0.8C6,5.6,6.3,5.5,6.6,5.5s0.6,0.1,0.8,0.3l4.6,4.6l4.6-4.6c0.2-0.2,0.5-0.3,0.8-0.3s0.6,0.1,0.8,0.3c0.2,0.2,0.3,0.5,0.3,0.8c0,0.3-0.1,0.6-0.3,0.8L13.6,12L18.2,16.6z" style="-fx-fill: white;" />
+               </children>
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

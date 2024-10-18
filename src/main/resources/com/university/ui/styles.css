@@ -1,0 +1,156 @@
+/* Global Styles */
+
+/* Primary Color */
+* {
+    -fx-primary-color: #006fff; /* Primary color */
+    -fx-dark-color: #122438;     /* Dark color for text and other elements */
+}
+
+/* Button Styles */
+.button {
+    -fx-padding: 4px 12px;
+    -fx-background-color: -fx-primary-color; /* Use primary color */
+    -fx-text-fill: white;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-cursor: pointer;
+}
+
+.button:hover {
+    -fx-background-color: derive(-fx-primary-color, -20%); /* Darker shade on hover */
+}
+
+/* Secondary Button Style */
+.secondary-button {
+    -fx-padding: 4px 12px;
+    -fx-background-color: #e0e0e0; /* Light gray for secondary buttons */
+    -fx-text-fill: black;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #d0d0d0;
+}
+
+/* Flat button HBox */
+.flat-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-text-fill: #122438;
+}
+.flat-button SVGPath {
+    -fx-fill: #122438;
+}
+
+.flat-button:hover {
+    -fx-text-fill: #006fff;
+    -fx-background-color: transparent;
+}
+
+.flat-button:hover SVGPath {
+    -fx-fill: #006fff;
+}
+
+.flat-button:pressed {
+    -fx-underline: true;
+}
+
+
+
+/* Label Styles */
+.label {
+    -fx-font-weight: bold;
+}
+
+/* TextField Styles */
+.text-field {
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+}
+
+/* Close HBox Styles */
+.close-hbox {
+    -fx-background-color: #ce0809; /* Background color for the close button */
+    -fx-padding: 12; /* Set padding */
+    -fx-cursor: hand; /* Change cursor to hand on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 1); /* Optional shadow effect */
+}
+
+.close-hbox:hover {
+    -fx-background-color: #a60606; /* Darken on hover */
+}
+
+/* Tab HBox Styles */
+.tabHBox {
+    -fx-background-radius: 4px;
+    -fx-cursor: hand;
+}
+
+.active-tab {
+    -fx-background-color: -fx-primary-color; /* Use primary color */
+}
+
+.active-tab SVGPath {
+    -fx-fill: white; /* Fill color for active tab icon */
+}
+
+.active-tab Label {
+    -fx-text-fill: white; /* Text color for active tab */
+}
+
+/* TableView Styles */
+/* Main TableView */
+.table-view {
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+    -fx-border-color: #cccccc;
+    -fx-selection-bar: #e7ebee;
+
+}
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background,
+.table-view .column-header-background .filler,
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+.table-view .column-header-background {
+    -fx-border-width: 1px;
+    -fx-border-color: transparent transparent #777777 transparent;
+}
+.table-view .column-header-background .label {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+.table-view .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-border-width: .1px;
+    -fx-border-color: transparent transparent #cccccc transparent;
+}
+.table-view *.scroll-bar:horizontal *.increment-button,
+.table-view *.scroll-bar:horizontal *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.table-view *.scroll-bar:horizontal *.increment-arrow,
+.table-view *.scroll-bar:horizontal *.decrement-arrow {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+}
+
+/* Selected Row */
+.table-view .table-row-cell:selected {
+    -fx-background-color: #f2f6fa;
+}
+
+
+

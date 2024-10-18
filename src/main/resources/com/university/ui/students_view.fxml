@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="10" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.university.ui.StudentsController">
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+    <HBox alignment="CENTER" spacing="10">
+       <Label text="Students">
+         <font>
+            <Font name="Cairo ExtraBold" size="20.0" />
+         </font>
+      </Label>
+      <Pane HBox.hgrow="ALWAYS" />
+        <Button onAction="#handleAddStudent" text="Add New">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+    </HBox>
+    <TableView fx:id="studentTableView" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="studentIdColumn" maxWidth="80.0" minWidth="-Infinity" resizable="false" text="ID">
+                <cellValueFactory>
+                    <PropertyValueFactory property="studentId" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="firstNameColumn" prefWidth="150.0" resizable="false" text="First Name">
+                <cellValueFactory>
+                    <PropertyValueFactory property="firstName" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="lastNameColumn" prefWidth="150.0" resizable="false" text="Last Name">
+                <cellValueFactory>
+                    <PropertyValueFactory property="lastName" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="semester1Column" prefWidth="55.0" resizable="false" text="Sem 1">
+                <cellValueFactory>
+                    <PropertyValueFactory property="semester1Avg" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="semester2Column" prefWidth="55.0" resizable="false" text="Sem 2">
+                <cellValueFactory>
+                    <PropertyValueFactory property="semester2Avg" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="semester3Column" prefWidth="55.0" resizable="false" text="Sem 3 ">
+                <cellValueFactory>
+                    <PropertyValueFactory property="semester3Avg" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="semester4Column" prefWidth="55.0" resizable="false" text="Sem 4">
+                <cellValueFactory>
+                    <PropertyValueFactory property="semester4Avg" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="actionCol" prefWidth="120.0" resizable="false" />
+        </columns>
+    </TableView>
+</VBox>
